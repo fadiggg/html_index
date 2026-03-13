@@ -37,6 +37,9 @@
     }
     .btn:active { transform: translateY(1px); }
     footer { margin-top: 24px; font-size: 0.9em; color: #666; }
+    /* 图片网格样式 */
+    .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+    .image-grid img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
   </style>
 </head>
 <body>
@@ -62,6 +65,26 @@
 
       <!-- 示例按钮：点击后触发 JavaScript 函数 -->
       <button class="btn" id="helloBtn">点我显示提示</button>
+    </section>
+
+    <!-- 图片示例：本地 SVG 演示 -->
+    <section style="margin-top:16px;">
+      <h2>图片示例</h2>
+      <p>下面展示了三张本地 SVG 示例图片（保存在 images/ 目录）。</p>
+      <div class="image-grid">
+        <figure>
+          <img src="images/pic1.svg" alt="示例图片 1" />
+          <figcaption style="font-size:0.9em;color:#555;margin-top:6px;">示例图片 1 — 圆形</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pic2.svg" alt="示例图片 2" />
+          <figcaption style="font-size:0.9em;color:#555;margin-top:6px;">示例图片 2 — 方块</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pic3.svg" alt="示例图片 3" />
+          <figcaption style="font-size:0.9em;color:#555;margin-top:6px;">示例图片 3 — 三角形</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- 小示例表单（无提交，仅用于展示表单结构） -->
