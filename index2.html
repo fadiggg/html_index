@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>三段布局 - index2</title>
+  <style>
+    html,body{height:100%;margin:0}
+    .wrap{display:flex;flex-direction:column;height:100vh}
+    .box{flex:1;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff}
+    .top{background:#4a90e2}
+    .middle{background:#50e3c2}
+    .bottom{background:#f5a623}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="box top">上方大盒子</section>
+    <section class="box middle">中间大盒子</section>
+    <section class="box bottom">下方大盒子</section>
+  </div>
+</body>
+</html>
