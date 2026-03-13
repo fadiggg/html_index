@@ -1,0 +1,23 @@
+/* advanced/style.css - 简单样式 */
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;margin:0;background:#f0f4f8;color:#1f2937;padding:20px}
+header{background:#0ea5a4;color:#fff;padding:16px;border-radius:8px;margin-bottom:16px}
+header h1{margin:0;font-size:1.4rem}
+.panel{background:#fff;padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(16,24,40,0.05);margin-bottom:12px}
+#taskForm{display:flex;gap:8px;align-items:center}
+#taskForm input,#taskForm select{padding:8px;border:1px solid #e6eef6;border-radius:6px}
+.btn{background:#2563eb;color:#fff;padding:8px 12px;border:none;border-radius:6px;cursor:pointer}
+.controls{display:flex;gap:8px;align-items:center;margin-top:8px}
+.filters .btn{background:#e2e8f0;color:#111;padding:6px 8px}
+.task-list{list-style:none;padding:0;margin:12px 0}
+.task-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-bottom:1px solid #f1f5f9}
+.task-left{display:flex;align-items:center;gap:8px}
+.task-title{font-weight:600}
+.task-meta{font-size:0.85rem;color:#6b7280}
+.task-actions button{margin-left:6px}
+.low{border-left:4px solid #10b981;padding-left:8px}
+.medium{border-left:4px solid #f59e0b;padding-left:8px}
+.high{border-left:4px solid #ef4444;padding-left:8px}
+footer{margin-top:12px;color:#555}
+.info ul{margin:0;padding-left:18px}
+@media(max-width:600px){#taskForm{flex-direction:column;align-items:stretch}}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!--
+    高级示例：任务管理器（advanced/index.html）
+    功能：添加/编辑/删除任务、标记完成、按优先级/状态过滤、搜索、导出/导入 JSON、本地存储持久化
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>高级任务管理器示例</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>高级任务管理器</h1>
+    <p>演示更复杂的前端交互与本地持久化（localStorage）。</p>
+  </header>
+
+  <main>
+    <!-- 添加任务表单 -->
+    <section class="panel">
+      <form id="taskForm">
+        <input id="taskTitle" placeholder="任务标题（必填）" required />
+        <input id="taskDue" type="date" />
+        <select id="taskPriority">
+          <option value="low">低</option>
+          <option value="medium" selected>中</option>
+          <option value="high">高</option>
+        </select>
+        <button type="submit" class="btn">添加任务</button>
+      </form>
+
+      <!-- 搜索与筛选 -->
+      <div class="controls">
+        <input id="search" placeholder="搜索任务标题..." />
+        <div class="filters">
+          <button class="filter btn" data-filter="all">全部</button>
+          <button class="filter btn" data-filter="active">未完成</button>
+          <button class="filter btn" data-filter="completed">已完成</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 任务列表 -->
+    <section class="panel">
+      <ul id="taskList" class="task-list"></ul>
+      <div class="task-actions">
+        <button id="clearCompleted" class="btn">清除已完成</button>
+        <button id="exportBtn" class="btn">导出 JSON</button>
+        <input id="importFile" type="file" accept="application/json" />
+      </div>
+    </section>
+
+    <!-- 导入/导出说明 -->
+    <section class="panel info">
+      <h3>说明</h3>
+      <ul>
+        <li>数据保存在浏览器 localStorage，刷新或关闭浏览器仍保留。</li>
+        <li>可导出为 JSON 文件备份或导入已有任务数据。</li>
+        <li>可编辑任务标题和截止日期。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    简单演示：无需后端，所有数据保存在本地浏览器。
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
