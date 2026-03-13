@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!--
+    简单网页示例（index.html）
+    说明：这是一个最小的 HTML5 页面，包含页面结构、样式和简单的交互脚本。
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>简单示例页面</title>
+  <!-- 内联样式，仅用于示例和快速查看效果 -->
+  <style>
+    /* 基本页面布局和样式 */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f7fb;
+      color: #222;
+    }
+    header {
+      background: #4b79a1;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+    main { max-width: 800px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #ff7b7b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn:active { transform: translateY(1px); }
+    footer { margin-top: 24px; font-size: 0.9em; color: #666; }
+  </style>
+</head>
+<body>
+  <!-- 页眉：站点标题和简介 -->
+  <header>
+    <h1>欢迎来到简单示例页面</h1>
+    <p>这是一个包含必要注释的最小静态网页模版。</p>
+  </header>
+
+  <!-- 主内容区：示例文本和交互按钮 -->
+  <main>
+    <section>
+      <h2>页面说明</h2>
+      <p>
+        这个页面演示了：
+        <ul>
+          <li>HTML5 基本结构（doctype、meta、title）</li>
+          <li>内联 CSS 用于快速样式展示</li>
+          <li>简单的 JavaScript 交互（按钮点击）</li>
+          <li>必要的中文注释，便于阅读和学习</li>
+        </ul>
+      </p>
+
+      <!-- 示例按钮：点击后触发 JavaScript 函数 -->
+      <button class="btn" id="helloBtn">点我显示提示</button>
+    </section>
+
+    <!-- 小示例表单（无提交，仅用于展示表单结构） -->
+    <section style="margin-top:16px;">
+      <h2>简单表单示例</h2>
+      <form id="demoForm" onsubmit="return false;">
+        <!-- 文本输入 -->
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" placeholder="请输入姓名" />
+        <!-- 示例提交按钮（不会真正提交） -->
+        <button class="btn" style="background:#4caf50; margin-left:8px;" id="greetBtn">打招呼</button>
+      </form>
+      <p id="greetMsg" style="margin-top:8px;color:#333;"></p>
+    </section>
+  </main>
+
+  <!-- 页脚：版权或说明信息 -->
+  <footer>
+    注：此页面仅作学习与演示用途。
+  </footer>
+
+  <!-- 脚本：为按钮绑定简单事件 -->
+  <script>
+    // 获取元素引用
+    const helloBtn = document.getElementById('helloBtn');
+    const greetBtn = document.getElementById('greetBtn');
+    const greetMsg = document.getElementById('greetMsg');
+
+    // 点击 helloBtn 后显示浏览器提示
+    helloBtn.addEventListener('click', () => {
+      // alert 用于演示最简单的交互
+      alert('你好！这是一个简单的提示。');
+    });
+
+    // 点击表单中的打招呼按钮，读取输入并显示在页面上
+    greetBtn.addEventListener('click', () => {
+      const nameInput = document.getElementById('name').value.trim();
+      if (nameInput) {
+        greetMsg.textContent = `你好，${nameInput}！欢迎学习 HTML。`;
+      } else {
+        greetMsg.textContent = '请先输入姓名后再打招呼。';
+      }
+    });
+  </script>
+</body>
+</html>
